@@ -2,6 +2,7 @@
 # define COMPRESS_H
 
 #include "use.h"
+# include <stdint.h>
 
 #define NOP 256
 

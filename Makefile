@@ -4,10 +4,10 @@ LDFLAGS=
 
 all: compress decompress
 
-compress: compress.o huffman.o use.o
+compress: main_cmpr.o huffman.o use.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-decompress: decompress.o huffman.o use.o
+decompress: main_dcmpr.o huffman.o use.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c

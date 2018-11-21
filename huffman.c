@@ -46,10 +46,10 @@ int md = 0;
 Node *huffmanTree(Node *arr, int n){
 	MinQueue *mq = minQueue(arr, n, sizeof(Node), comp);
 
-	for (int i = 0; i < n-1; i++){
+	for (int i = 0; i < n; i++){
 		Node *a = mqExtractMin(mq);
 		Node *b = mqExtractMin(mq);
-		Node z = (Node){NOP, a->freq + b->freq, a, b};
+		Node z = (Node){NOP, (a ? a->freq : 0) + (b ? b->freq : 0), a, b};
 		mqInsert(mq, &z);
 	}
 	return mqExtractMin(mq); //root of the tree

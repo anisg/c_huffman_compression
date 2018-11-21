@@ -5,6 +5,7 @@ typedef int bool;
 #define TRUE 1
 #define FALSE 0
 
+#include <stdint.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
